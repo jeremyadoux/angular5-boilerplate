@@ -1,0 +1,8 @@
+<form [formGroup]="formDemo" (submit)="submitForm(formDemo)" xmlns="http://www.w3.org/1999/html">
+  <app-form-boiletplate-input-text
+    [inputFormControl]="formDemo.controls['email']">
+    <app-form-error-message inputErrorName="required">This input is <strong>required</strong></app-form-error-message>
+    <app-form-error-message inputErrorName="pattern">This input must be an <strong>valid email</strong></app-form-error-message>
+  </app-form-boiletplate-input-text>
+  <button type="submit">save</button>
+</form>

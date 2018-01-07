@@ -1,0 +1,8 @@
+<mat-form-field>
+  <input matInput placeholder="Email" [formControl]="inputFormControl">
+  <mat-error *ngFor="let errorMessage of inputErrorList">
+    <span *ngIf="inputFormControl.hasError(errorMessage.name)" [innerHtml]="errorMessage.message"></span>
+  </mat-error>
+</mat-form-field>
+<ng-content></ng-content>
+<a (click)="test()">test</a>
