@@ -1,0 +1,19 @@
+<div class="mat-app-background basic-container">
+  <mat-input-container>
+    <div class="form-boilerplate-number">
+      <button (click)="decrease()" class="form-boilerplate-input-number-dec" type="button" mat-icon-button color="primary">
+        <mat-icon aria-label="Less">keyboard_arrow_left</mat-icon>
+      </button>
+      <input matInput class="form-boilerplate-input-number" [placeholder]="placeholder" [formControl]="inputFormControl">
+      <button (click)="increase()" class="form-boilerplate-input-number-inc" type="button" mat-icon-button color="primary">
+        <mat-icon aria-label="More">keyboard_arrow_right</mat-icon>
+      </button>
+      <ng-content></ng-content>
+    </div>
+    <mat-hint class="mat-error">
+      <ng-container *ngFor="let errorMessage of inputErrorList">
+        <span  *ngIf="inputFormControl.hasError(errorMessage.name)" [innerHtml]="errorMessage.message"></span>
+      </ng-container>
+    </mat-hint>
+  </mat-input-container>
+</div>

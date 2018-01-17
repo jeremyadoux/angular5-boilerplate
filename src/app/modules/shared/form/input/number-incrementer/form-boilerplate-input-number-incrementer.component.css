@@ -1,0 +1,19 @@
+.form-boilerplate-input-number {
+  float: left;
+  padding: 3px 0 0;
+  text-align: center;
+  width: 40px;
+}
+
+.form-boilerplate-input-number-dec, .form-boilerplate-input-number-inc {
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.form-boilerplate-number {
+  display: flex;
+  overflow: hidden;
+}

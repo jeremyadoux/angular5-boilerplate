@@ -1,8 +1,21 @@
 <form [formGroup]="formDemo" (submit)="submitForm(formDemo)" xmlns="http://www.w3.org/1999/html">
-  <app-form-boiletplate-input-text
-    [inputFormControl]="formDemo.controls['email']">
-    <app-form-error-message inputErrorName="required">This input is <strong>required</strong></app-form-error-message>
-    <app-form-error-message inputErrorName="pattern">This input must be an <strong>valid email</strong></app-form-error-message>
-  </app-form-boiletplate-input-text>
+  <div>
+    <app-form-boiletplate-input-text
+      placeholder="Email"
+      [inputFormControl]="formDemo.controls['email']">
+      <app-form-error-message inputErrorName="required">This input is <strong>required</strong></app-form-error-message>
+      <app-form-error-message inputErrorName="pattern">This input must be an <strong>valid email</strong></app-form-error-message>
+    </app-form-boiletplate-input-text>
+  </div>
+  <div>
+    <app-input-number-incrementer
+      placeholder="Label"
+      [inputFormControl]="formDemo.controls['number']"
+      min="5"
+    ></app-input-number-incrementer>
+  </div>
+  <div>
+    <app-input-radio-button placeholder="Encore" [inputFormControl]="formDemo.controls['radioList']" [options]="radioListJson" ></app-input-radio-button>
+  </div>
   <button type="submit">save</button>
 </form>

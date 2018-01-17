@@ -1,0 +1,10 @@
+<div class="mat-app-background basic-container">
+  <div class="mat-form-field form-boilerplate-input-radio-button">
+    <label>{{placeholder}}</label>
+    <mat-button-toggle-group [formControl]="inputFormControl" vertical="true">
+      <mat-button-toggle *ngFor="let data of options" [value]="data.value">
+        {{data.name}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
